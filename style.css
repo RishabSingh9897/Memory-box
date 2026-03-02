@@ -1,0 +1,180 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background: linear-gradient(135deg,#ffeaf4,#fff4e6);
+font-family: 'Quicksand', sans-serif;
+overflow-x:hidden;
+}
+
+/* INTRO SCREEN */
+
+.intro-screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.gift-box{
+position:relative;
+width:160px;
+height:130px;
+cursor:pointer;
+}
+
+.box-body{
+position:absolute;
+bottom:0;
+width:100%;
+height:110px;
+background:#ff6f91;
+border-radius:12px;
+}
+
+.lid{
+position:absolute;
+top:0;
+width:100%;
+height:45px;
+background:#ff8fab;
+border-radius:12px;
+transform-origin:bottom;
+transition:0.8s ease;
+}
+
+.ribbon-vertical{
+position:absolute;
+width:22px;
+height:100%;
+background:#fff;
+left:50%;
+transform:translateX(-50%);
+z-index:2;
+}
+
+.ribbon-horizontal{
+position:absolute;
+height:22px;
+width:100%;
+background:#fff;
+top:35px;
+z-index:2;
+}
+
+.gift-box.open .lid{
+transform:rotateX(120deg);
+}
+
+.open-text{
+margin-top:20px;
+font-weight:600;
+}
+
+/* MAIN */
+
+.main{
+padding:40px 15px 80px;
+text-align:center;
+animation:fadeIn 1.2s ease;
+}
+
+.hidden{
+display:none;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* VIDEO */
+
+.video-container{
+width:90%;
+max-width:750px;
+margin:0 auto 35px;
+display:flex;
+justify-content:center;
+}
+
+video{
+width:100%;
+height:auto;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+background:black;
+}
+
+/* MESSAGE */
+
+.message-container h1{
+margin-bottom:20px;
+font-size:2.5rem;
+}
+
+.paper{
+background:#fffdf5;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+font-family:'Special Elite', monospace;
+line-height:1.7;
+position:relative;
+max-width:700px;
+margin:0 auto;
+}
+
+.paper:before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:10px;
+background: repeating-linear-gradient(
+90deg,
+#ffe0e0,
+#ffe0e0 10px,
+#fffdf5 10px,
+#fffdf5 20px
+);
+border-top-left-radius:14px;
+border-top-right-radius:14px;
+}
+
+/* FLOATING DECORATIONS */
+
+.floating-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.floating{
+position:absolute;
+width:40px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+.message-container h1{
+font-size:2rem;
+}
+}

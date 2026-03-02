@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Box</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Floating Decorations -->
+<div class="floating-container"></div>
+
+<!-- Intro Screen -->
+<div class="intro-screen">
+    <div class="gift-box" id="giftBox">
+        <div class="lid"></div>
+        <div class="box-body"></div>
+        <div class="ribbon-vertical"></div>
+        <div class="ribbon-horizontal"></div>
+    </div>
+    <p class="open-text">Tap to Open 🎁</p>
+</div>
+
+<!-- Main Content -->
+<div class="main hidden" id="mainContent">
+
+    <div class="video-container">
+        <video id="giftVideo" playsinline>
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="message-container">
+        <h1>Happy Birthday 🎉</h1>
+        <div class="paper">
+            <p>
+                You are one of the most special people in my life.
+                I hope this year brings you joy, success, and endless happiness.
+                Keep shining always ✨
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
